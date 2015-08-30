@@ -1,0 +1,528 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Hexo学习(一) | 树和小房子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="cyz">
+    
+
+    
+    <meta name="description" content="搭建hexo博客
+安装Git下载地址: http://git-scm.com/download/
+安装Node.js下载地址: https://nodejs.org/
+安装Hexo下载地址: https://hexo.io/
+
+Hexo安装这些命令是在git bash里进行的12345npm install hexo-cli -ghexo init blogcd blognpm installhe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo学习(一)">
+<meta property="og:url" content="http://cyz108d.github.io/2015/08/30/Hexo学习(一)/index.html">
+<meta property="og:site_name" content="树和小房子">
+<meta property="og:description" content="搭建hexo博客
+安装Git下载地址: http://git-scm.com/download/
+安装Node.js下载地址: https://nodejs.org/
+安装Hexo下载地址: https://hexo.io/
+
+Hexo安装这些命令是在git bash里进行的12345npm install hexo-cli -ghexo init blogcd blognpm installhe">
+<meta property="og:updated_time" content="2015-08-30T16:44:56.809Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo学习(一)">
+<meta name="twitter:description" content="搭建hexo博客
+安装Git下载地址: http://git-scm.com/download/
+安装Node.js下载地址: https://nodejs.org/
+安装Hexo下载地址: https://hexo.io/
+
+Hexo安装这些命令是在git bash里进行的12345npm install hexo-cli -ghexo init blogcd blognpm installhe">
+
+    
+    <link rel="alternative" href="/atom.xml" title="树和小房子" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="树和小房子" title="树和小房子"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="树和小房子">树和小房子</a></h1>
+				<h2 class="blog-motto">月亮说它忘记了</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">目录</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:cyz108d.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/30/Hexo学习(一)/" title="Hexo学习(一)" itemprop="url">Hexo学习(一)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="cyz" target="_blank" itemprop="author">cyz</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-30T15:22:41.000Z" itemprop="datePublished"> 发表于 2015-08-30</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建hexo博客"><span class="toc-number">1.</span> <span class="toc-text">搭建hexo博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo安装"><span class="toc-number">2.</span> <span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册Github账号"><span class="toc-number">3.</span> <span class="toc-text">注册Github账号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建repository名称"><span class="toc-number">3.1.</span> <span class="toc-text">创建repository名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#github的ssh公钥和私钥设置"><span class="toc-number">3.2.</span> <span class="toc-text">github的ssh公钥和私钥设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为Hexo设置主题(可略)"><span class="toc-number">4.</span> <span class="toc-text">为Hexo设置主题(可略)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在hexo初始化内容的路径下"><span class="toc-number">4.1.</span> <span class="toc-text">在hexo初始化内容的路径下</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo部署"><span class="toc-number">5.</span> <span class="toc-text">Hexo部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改hexo下的_config-yml"><span class="toc-number">5.1.</span> <span class="toc-text">修改hexo下的_config.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题设置部分(可略)"><span class="toc-number">5.2.</span> <span class="toc-text">主题设置部分(可略)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接下来必要命令"><span class="toc-number">5.3.</span> <span class="toc-text">接下来必要命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结以后常用的几个命令"><span class="toc-number">6.</span> <span class="toc-text">总结以后常用的几个命令</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="搭建hexo博客">搭建hexo博客</h2><ol>
+<li>安装Git<br>下载地址: <a href="http://git-scm.com/download/" target="_blank" rel="external">http://git-scm.com/download/</a></li>
+<li>安装Node.js<br>下载地址: <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a></li>
+<li>安装Hexo<br>下载地址: <a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></li>
+</ol>
+<h2 id="Hexo安装">Hexo安装</h2><p>这些命令是在git bash里进行的<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-cli -<span class="keyword">g</span></span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm <span class="keyword">install</span></span><br><span class="line">hexo <span class="keyword">server</span></span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>命令1: npm install hexo-cli -g</strong></p>
+</blockquote>
+<p>输入这条命令时:出现了一个警告.<br><code>WARN optional dep failed,continuing fsevents</code><br><a id="more"></a></p>
+<p>在网上搜索了下,好像是没什么影响.执行后:<br><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:<span class="command">\Users</span><span class="command">\Administrator</span><span class="command">\AppData</span><span class="command">\Roaming</span><span class="command">\npm</span></span><br><span class="line">C:<span class="command">\Users</span><span class="command">\Administrator</span><span class="command">\AppData</span><span class="command">\Roaming</span><span class="command">\npm</span>-cache</span><br></pre></td></tr></table></figure></p>
+<p>两个文件夹里会生成一些必要的文件.</p>
+<blockquote>
+<p><strong>命令2: hexo init blog</strong></p>
+</blockquote>
+<p>这条命令,意思是在该条命令路径下,把hexo初始化内容拷贝到blog文件下<br>所以,其实可以不要命令中的blog.<br><code>hexo init</code>直接把hexo初始化内容拷贝到当前命令的路径下.</p>
+<blockquote>
+<p><strong>命令3: cd blog</strong></p>
+</blockquote>
+<p>意思是进入blog文件夹,也就是hexo初始化内容的路径下.如果上条命令省略了blog,<br>就不用执行这条命令了,因为已经在hexo初始化内容的路径下了.</p>
+<blockquote>
+<p><strong>命令4: npm install</strong></p>
+</blockquote>
+<p>意思是安装hexo依赖包</p>
+<blockquote>
+<p><strong>命令5: hexo server</strong></p>
+</blockquote>
+<p>意思是启动本地hexo,执行后<br>出现了INFO Hexo is running……:4000Press CTRL+C to stop.<br>说明hexo已经启动了.<br>在浏览器里输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就会出现hexo网站的首页.</p>
+<p>该条命令可以缩写为: <code>hexo s</code></p>
+<h2 id="注册Github账号">注册Github账号</h2><h3 id="创建repository名称">创建repository名称</h3><p>例如 cyz108d.github.io<br>其中cyz108d是github的用户名称</p>
+<h3 id="github的ssh公钥和私钥设置">github的ssh公钥和私钥设置</h3><p>教程[ git 使用(ssh key创建和github使用) ]<br><a href="http://blog.csdn.net/xsckernel/article/details/8563993" target="_blank" rel="external">http://blog.csdn.net/xsckernel/article/details/8563993</a></p>
+<h2 id="为Hexo设置主题(可略)">为Hexo设置主题(可略)</h2><p>[如果是用默认主题,可以跳出此步]<br>我的主题选得<strong>Jacman</strong></p>
+<h3 id="在hexo初始化内容的路径下">在hexo初始化内容的路径下</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git clone <span class="symbol">https:</span>/<span class="regexp">/github.com/wuchong</span><span class="regexp">/jacman.git themes/jacman</span></span><br></pre></td></tr></table></figure>
+<p>文件themes下会出现jacman,里面会有README_zh.md,里面有具体的主题内容安装和配置说明.</p>
+<h2 id="Hexo部署">Hexo部署</h2><p>把hexo部署到github上,在hexo官网上还有不同的环境部署.<br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a></p>
+<h3 id="修改hexo下的_config-yml">修改hexo下的_config.yml</h3><p>这里的配置,是部署的必要点<br>新版本:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:cyz108D/cyz108d.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
+<p>上面的repository是ssh地址.好像有了ssh密钥就要这样设置,没有可能如下边的<br>repository的地址.</p>
+<p>传说中的旧版本(没有测试过):<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: github</span><br><span class="line">  <span class="attribute">repository</span>: <span class="attribute">https</span>:<span class="comment">//github.com/zippera/zippera.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
+<h3 id="主题设置部分(可略)">主题设置部分(可略)</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">theme:</span> jacman</span><br><span class="line"><span class="string">stylus:</span></span><br><span class="line"><span class="label">  compress:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="接下来必要命令">接下来必要命令</h3><p>发布: hexo generate == hexo g<br>部署: hexo deploy   == hexo d<br>这两条命令一般是同时进行,意思是有了新的文章,需要先发布,再部署到服务器上去,<br>这样网上的显示才有效果.<br>部署:在这里就是把发布的网站内容部署到github上去</p>
+<blockquote>
+<p>hexo ERROR Deployer not found: github 问题</p>
+</blockquote>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">安装 npm install hexo-deployer-git <span class="comment">--save</span></span><br><span class="line">将deploy 的 <span class="typedef"><span class="keyword">type</span>由github改为git</span></span><br></pre></td></tr></table></figure>
+<h2 id="总结以后常用的几个命令">总结以后常用的几个命令</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo <span class="string">new  :</span> 新建md文章</span><br><span class="line">hexo s == hexo <span class="string">server :</span>启动本地hexo,可以在本地看到新添文章效果</span><br><span class="line"></span><br><span class="line">hexo g == hexo <span class="string">generate :</span>正式发布</span><br><span class="line">hexo d == hexo <span class="string">deploy :</span>上传到服务器上去</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>针对新建文章,我觉着有点麻烦</p>
+</blockquote>
+<p>执行这条命令后,会在source_posts,新建一个md格式的文件,它们都有一个头文件的配置如下:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: my <span class="keyword">new</span> post <span class="preprocessor">#可以改成中文的，如<span class="string">"新文章"</span></span></span><br><span class="line">date: <span class="number">2013</span>-<span class="number">05</span>-<span class="number">29</span> <span class="number">07</span>:<span class="number">56</span>:<span class="number">29</span> <span class="preprocessor">#发表日期，一般不改动</span></span><br><span class="line">categories: blog <span class="preprocessor">#文章文类</span></span><br><span class="line">tags: [博客，文章] <span class="preprocessor">#文章标签，多于一项时用这种格式</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>以后我一般就是在该文件夹下,手动可以添加一个具有该头部格式的md的文件</p>
+<p>参考网址:<br><a href="http://zipperary.com/2013/05/29/hexo-guide-1/" target="_blank" rel="external">http://zipperary.com/2013/05/29/hexo-guide-1/</a><br><a href="http://zipperary.com/2013/05/29/hexo-guide-2/" target="_blank" rel="external">http://zipperary.com/2013/05/29/hexo-guide-2/</a><br><a href="http://zipperary.com/2013/05/29/hexo-guide-3/" target="_blank" rel="external">http://zipperary.com/2013/05/29/hexo-guide-3/</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/IT/">IT</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/G-Github/">G>>Github</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://cyz108d.github.io/2015/08/30/Hexo学习(一)/" data-title="Hexo学习(一) | 树和小房子" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/08/30/Git时间/"  title="Git时间">
+ <strong>下一篇：</strong><br/> 
+ <span>Git时间
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/08/30/Hexo学习(一)/" data-title="Hexo学习(一)" data-url="http://cyz108d.github.io/2015/08/30/Hexo学习(一)/"></div>
+</section>
+
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建hexo博客"><span class="toc-number">1.</span> <span class="toc-text">搭建hexo博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo安装"><span class="toc-number">2.</span> <span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册Github账号"><span class="toc-number">3.</span> <span class="toc-text">注册Github账号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建repository名称"><span class="toc-number">3.1.</span> <span class="toc-text">创建repository名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#github的ssh公钥和私钥设置"><span class="toc-number">3.2.</span> <span class="toc-text">github的ssh公钥和私钥设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为Hexo设置主题(可略)"><span class="toc-number">4.</span> <span class="toc-text">为Hexo设置主题(可略)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在hexo初始化内容的路径下"><span class="toc-number">4.1.</span> <span class="toc-text">在hexo初始化内容的路径下</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo部署"><span class="toc-number">5.</span> <span class="toc-text">Hexo部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改hexo下的_config-yml"><span class="toc-number">5.1.</span> <span class="toc-text">修改hexo下的_config.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题设置部分(可略)"><span class="toc-number">5.2.</span> <span class="toc-text">主题设置部分(可略)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接下来必要命令"><span class="toc-number">5.3.</span> <span class="toc-text">接下来必要命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结以后常用的几个命令"><span class="toc-number">6.</span> <span class="toc-text">总结以后常用的几个命令</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/IT/" title="IT">IT<sup>2</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/G-Github/" title="G&gt;&gt;Github">G&gt;&gt;Github<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m cyz. <br/>
+			Just want to learn a little every day, more than a little.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="cyz">cyz</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"cyz108d"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
